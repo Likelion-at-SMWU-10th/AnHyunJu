@@ -13,6 +13,21 @@ body {
     min-width: fit-content;
 }
 
+h1 {
+	font-size: 36px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+h2 {
+	font-size: 20px;
+	font-weight: lighter;
+	color: #282828;
+	border-bottom: 1px solid #ebebeb;
+	margin-bottom: 16px;
+	padding-bottom: 5px;
+}
+
 .name-text {                                  
     font-size: 17px;                         
     color: #7c7c7c;
