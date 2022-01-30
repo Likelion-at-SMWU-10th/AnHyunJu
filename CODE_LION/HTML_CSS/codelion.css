@@ -85,3 +85,18 @@ section {
 	/* text-align: right; */
 	float: right;
 }
+
+.float-wrap {
+	/* overflow 프로퍼티는 요소내의 컨텐츠가 너무 커서 요소내에 모두 보여주기 힘들때 그것을 어떻게 보여줄지를 지정 */
+	overflow: hidden;
+}
+
+.desc-text {
+	font-size: 9px;
+}
+
+.desc-subtext {
+	font-size: 9px;
+	color: #282828;
+	padding-left: 16px;
+}
