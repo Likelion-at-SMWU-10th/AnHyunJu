@@ -29,23 +29,37 @@ import time
 # print(information2.get("특기"))
 
 # 6강 List와 Dictionary
-information = {"고향": "대구", "취미": "산책", "좋아하는 음식" : "일식"}
-print(information.get("취미"))
-information["특기"] = "피아노"
-information["사는곳"] = "서울"
-print(information)
-del information["좋아하는 음식"]
-print(information)
-print(len(information))
-information.clear()
-print(information)
+# information = {"고향": "대구", "취미": "산책", "좋아하는 음식" : "일식"}
+# print(information.get("취미"))
+# information["특기"] = "피아노"
+# information["사는곳"] = "서울"
+# print(information)
+# del information["좋아하는 음식"]
+# print(information)
+# print(len(information))
+# information.clear()
+# print(information)
+
+# foods = ["된장찌개", "피자", "제육볶음"]
+# print(foods[0])
+# print(foods[-1])
+# foods.append("김밥")
+# print(foods)
+# foods.pop()
+# print(foods)
+# del foods[1]
+# print(foods)
+
+
+# 7강 반복하기
+for x in range(30):
+    print(x)
 
 foods = ["된장찌개", "피자", "제육볶음"]
-print(foods[0])
-print(foods[-1])
-foods.append("김밥")
-print(foods)
-foods.pop()
-print(foods)
-del foods[1]
-print(foods)
+for i in foods:
+    print(i)
+
+information = {"고향":"수원", "취미":"영화관람", "좋아하는 음식":"국수"}
+for x, y in information.items():
+    print(x)
+    print(y)
