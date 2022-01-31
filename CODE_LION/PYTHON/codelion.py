@@ -52,14 +52,66 @@ import time
 
 
 # 7강 반복하기
-for x in range(30):
-    print(x)
+# for x in range(30):
+#     print(x)
 
-foods = ["된장찌개", "피자", "제육볶음"]
-for i in foods:
-    print(i)
+# foods = ["된장찌개", "피자", "제육볶음"]
+# for i in foods:
+#     print(i)
 
-information = {"고향":"수원", "취미":"영화관람", "좋아하는 음식":"국수"}
-for x, y in information.items():
-    print(x)
-    print(y)
+# information = {"고향":"수원", "취미":"영화관람", "좋아하는 음식":"국수"}
+# for x, y in information.items():
+#     print(x)
+#     print(y)
+
+
+# 8,9강 집합
+# foods = ["된장찌개", "피자", "제육볶음"]
+# foods_set1 = set(foods)
+# foods_set2 = set(["된장찌개", "피자", "제육볶음"])
+# print(foods_set1)
+# print(foods_set2)
+# print("------")
+
+# foods = ["된장찌개", "피자", "제육볶음", "된장찌개"]
+# foods_set = set(foods)
+# print(foods)
+# print(foods_set)
+# print("-----")
+
+# menu1 = set(["된장찌개", "피자", "제육볶음"])
+# menu2 = set(["된장찌개", "떡국", "김밥"])
+# menu3 = menu1 | menu2 #합집합
+# print(menu3)
+# menu3 = menu1 & menu2 #교집합
+# print(menu3)
+# menu3 = menu1 - menu2 #차집합
+# print(menu3)
+
+
+#10강 조건문
+# import random
+
+# food = random.choice(["된장찌개","피자","제육볶음"])
+
+# print(food)
+# if(food == "제육볶음"):
+#     print("곱배기 주세요")
+# else:
+#     print("그냥 주세요")
+# print("종료")
+
+
+#11~ 오늘 뭐드실? 제작하기
+lunch = ["된장찌개","피자","제육볶음","짜장면"]
+
+while True:
+    print(lunch)
+    item = input("음식을 추가해주세요(q를 입력하면 입력 종료) : ")
+    if item == "q":
+        break
+    else:
+        lunch.append(item)
+    
+print(lunch)
+set_lunch = set(lunch)
