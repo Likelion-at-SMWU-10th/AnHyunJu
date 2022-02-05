@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자소서 글자수 계산기</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        h1 {
+            margin-top: 30px;
+        }
+        #count {
+            float: right;
+        }
+    </style>
+</head>
+<body class="container">
+    <h1>자기소개</h1>
+    <!-- [5] 글자를 쓸때마다 자동으로 글자수를 세기 : event(마우스 클릭,키보드 클릭) 이벤트 헨들링 -->
+    <!-- <textarea 이벤트 = 이벤트 핸들링></textarea> -->
+    <textarea onkeydown='counter();' class="form-control" rows="3" id="jasoseol">저는 인성 문제가 없습니다.</textarea>
+    <span id='count'>(0/200)</span>
+    <script>
+        //[1] textarea 값을 가져오기
+        var content = document.getElementById('jasoseol').value;
+        //[2] 문자열의 길이 가져오기 
+        console.log(content.length);
+        //[3] 글자수의 길이 표현하기
+        document.getElementById('count').innerHTML = '(' + content.length + '/ 200)';
+        //[4] 여러번 사용하는 코드 => 함수 => 명령의 모음 / function 함수이름() { 명령어들...}
+        function counter() {
+            var content = document.getElementById('jasoseol').value;
+            //[6] 글자수 제한하기 - 200자로 넘어서면 자르기 
+            //.substring() - 인덱스로 자르기 content.substring(0,200);
+            if (content.length > 200) {
+                content = content.substring(0,200);
+            }
+            document.getElementById('jasoseol').value = content;
+            
+            document.getElementById('count').innerHTML = '(' + content.length + '/ 200)';
+        }
+        counter();
+
+    </script>
+</body>
+</html>
