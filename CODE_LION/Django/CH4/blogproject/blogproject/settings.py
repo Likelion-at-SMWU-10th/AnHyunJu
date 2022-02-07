@@ -118,6 +118,13 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+#미디어 파일이 저장되는 경로
+import os
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#사용자에 의해 올라온 업로된 사진을 접근할 수 있는 url..? 경로
+MEDIA_URL = "/media/"
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

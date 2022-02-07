@@ -3,6 +3,9 @@ from django.contrib import admin
 from django.urls import path
 from blogapp import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
@@ -20,4 +23,10 @@ urlpatterns = [
     #127.0.0.1:8000/datil/1 이런식으로 페이지를 만들고 싶다
     path('detail/<int:blog_id> ',  views.detail, name='detail'),
 
-]
+    #댓글 저장 url
+    path('create_comment/<int:blog_id> ',  views.create_comment, name='create_comment'),
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# media 파일에 접근할 수 있는 url도 추가해줘야함(위의 형태와 아래의 형태가 같음)
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
