@@ -6,6 +6,8 @@ from blogapp import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+from accounts import views as accounts_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
@@ -25,6 +27,10 @@ urlpatterns = [
 
     #댓글 저장 url
     path('create_comment/<int:blog_id> ',  views.create_comment, name='create_comment'),
+
+    #login path 등록
+    path('login/',  accounts_views.login, name='login'),
+     path('logout/', accounts_views.logout, name='logout'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
