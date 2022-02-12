@@ -1,0 +1,19 @@
+<!-- static 파일을 load 해주세요 -->
+<!-- 아래와 같은 형태를 우리는 template 언어라고 부른다, html 안에서 쓸 수 있는 장고의 언어  -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mycss/style2.css' %}">
+    <title>Static Practice</title>
+</head>
+<body>
+    <div>Hello Static</div>
+    <img src="{% static 'img/cat.png' %}" width="50%">
+</body>
+</html>
